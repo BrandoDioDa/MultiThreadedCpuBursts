@@ -1,0 +1,4 @@
+C:\WINDOWS\system32\wsl.exe --distribution Ubuntu --exec /bin/bash -c "export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/c/Users/Brandon/CLionProjects/OperatingSystems/assign5/cmake-build-debug-wsl && /home/brandon/cmake-3.21.1/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' /mnt/c/Users/Brandon/CLionProjects/OperatingSystems/assign5"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/Brandon/CLionProjects/OperatingSystems/assign5/cmake-build-debug-wsl

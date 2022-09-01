@@ -1,0 +1,29 @@
+CC = gcc
+CFLAGS = -Wall -g
+
+all: main.c
+
+clean:
+	rm -f prog *.o
+
+dLinkedList.o: dLinkedList.c dLinkedList.h
+	$(CC) $(CFLAGS) -c dLinkedList.c
+
+main.o: main.c dLinkedList.h
+	$(CC) $(CFLAGS) -c main.c
+
+main: main.o dLinkedList.o
+	$(CC) $(CFLAGS) -o main main.o dLinkedList.o
+
+run1:
+	main -alg FIFO -input input2.txt
+run2:
+	main -alg SJF -input input2.txt
+run3:
+	main -alg PR -input input2.txt
+run4:
+	main -alg RR -quantum 60 -input input2.txt
+run5:
+	main -alg RR -quantum 30 -input input2.txt
+run6:
+	main -alg RR -quantum 10 -input input2.txt

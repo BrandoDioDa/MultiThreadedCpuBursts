@@ -1,0 +1,60 @@
+REPORT ON HIGHER LEVEL CONCEPTS:
+High-Level Design: I decided to start this program by creating a doubly linked list library from scratch. I spent a many hours creating and testing
+the functions you see to allow traversal from both sides of the linked list. Next, I initialized all the global variables
+outlined in the helper document and added some extra ones I might need for later. Main's job was to create the lists
+I would need, parse the input line, and being the threads with the stored information from the input line. The
+lineRead() thread would read one line from an input file (input2.txt) and parse said line into tokens. These tokens
+were stored into their respective variables and used to create new PCB structs that were passed into the Ready queue (Ready_Q).
+Once a PCB was in the Ready_Q the second thread CPU_Scheduler_FIFO would read what algorithm the user wanted to use
+to traverse the CPU bursts (represented through usleep()). Once the CPU burst was gone through, as long as the PCB had remaining bursts
+it would enter the IO/queue. Once all CPU bursts were gone through the PCB would be stored in a done_Q so that the
+stats of the PCB could be displayed (i.e. throughput).
+
+Extra: Sadly, this program isn't finished. A Logic error exists causes an infinite loop when you try a quantum size
+that's less than 20, and he CPU Utilization stat was never finished.
+
+OUTPUTS:
+-------------------------------------------------------
+Student Name: Brandon Stevenson
+CPU Scheduling Alg:   FIFO
+Input File Name :     input2.txt
+CPU Utilization:      TODO
+Throughput:           0.011 jobs per ms
+Avg. Turnaround time: 334.37 ms
+Avg. Waiting time in R queue: 242.55 ms
+-------------------------------------------------------
+Student Name: Brandon Stevenson
+CPU Scheduling Alg:   SJF
+Input File Name :     input2.txt
+CPU Utilization:      TODO
+Throughput:           0.011 jobs per ms
+Avg. Turnaround time: 313.39 ms
+Avg. Waiting time in R queue: 218.69 ms
+-------------------------------------------------------
+Student Name: Brandon Stevenson
+CPU Scheduling Alg:   PR
+Input File Name :     input2.txt
+CPU Utilization:      TODO
+Throughput:           0.011 jobs per ms
+Avg. Turnaround time: 324.86 ms
+Avg. Waiting time in R queue: 230.23 ms
+-------------------------------------------------------
+Student Name: Brandon Stevenson
+CPU Scheduling Alg:   RR  quantum: 10
+Input File Name :     input2.txt
+-------------------------------------------------------
+Student Name: Brandon Stevenson
+CPU Scheduling Alg:   RR  quantum: 30
+Input File Name :     input2.txt
+CPU Utilization:      TODO
+Throughput:           0.011 jobs per ms
+Avg. Turnaround time: 316.12 ms
+Avg. Waiting time in R queue: 221.40 ms
+-------------------------------------------------------
+Student Name: Brandon Stevenson
+CPU Scheduling Alg:   RR  quantum: 60
+Input File Name :     input2.txt
+CPU Utilization:      TODO
+Throughput:           0.011 jobs per ms
+Avg. Turnaround time: 331.67 ms
+Avg. Waiting time in R queue: 240.23 ms

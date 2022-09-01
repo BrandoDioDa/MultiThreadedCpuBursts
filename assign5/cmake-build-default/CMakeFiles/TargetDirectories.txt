@@ -1,0 +1,3 @@
+C:/Users/Brandon/CLionProjects/OperatingSystems/assign5/cmake-build-default/CMakeFiles/assign5.dir
+C:/Users/Brandon/CLionProjects/OperatingSystems/assign5/cmake-build-default/CMakeFiles/edit_cache.dir
+C:/Users/Brandon/CLionProjects/OperatingSystems/assign5/cmake-build-default/CMakeFiles/rebuild_cache.dir
